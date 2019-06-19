@@ -1,18 +1,9 @@
-apiVersion: apps/v1 # Default K8 API
-kind: Deployment # This tells kubernetes what kind of class it is working with
+apiVersion: batch/v1 # Default K8 API
+kind: Job # This tells kubernetes what kind of class it is working with
 metadata:
-  name: hello-world # Name of the deployment
-  labels:
-    app: hello-world-deployment # Label for deployment
+  name: hello-world # Name of the Job
 spec:
-  replicas: 3 # How many instances / pods to deploy
-  selector: # The selector defines how the deployment finds which pods to manage, in this use the app label to figure out which pods belong to deployment
-    matchLabels:
-      app: hello-world
   template: # Pod Templete
-    metadata:
-      labels:
-        app: hello-world # Labels for pods in which to identify them by
     spec:
       containers:
       - name: hello-world # Container name (Can be set to whatever)
