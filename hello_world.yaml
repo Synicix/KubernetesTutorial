@@ -17,3 +17,4 @@ spec:
       containers:
       - name: hello-world # Container name (Can be set to whatever)
         image: hello-world:latest # Docker Image hosted on Docker Hub
+      restartPolicy: OnFailure # Options are Always, OnFailure, and Never. In our case for hello-world it is only suppose to check if docker is working then exit and it is not a serivce
