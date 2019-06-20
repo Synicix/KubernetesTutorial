@@ -5,5 +5,5 @@ metadata:
 spec:
     containers:
     - name: hello-world # Container name (Can be set to whatever)
-    image: hello-world:latest # Docker Image hosted on Docker Hub
-    restartPolicy: OnFailure # Options are Always, OnFailure, and Never
+        image: hello-world:latest # Docker Image hosted on Docker Hub
+        restartPolicy: OnFailure # Options are Always, OnFailure, and Never
