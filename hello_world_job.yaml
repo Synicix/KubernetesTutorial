@@ -6,6 +6,6 @@ spec:
   template: # Pod Templete
     spec:
       containers:
-      restartPolicy: OnFailure # Options are Always, OnFailure, and Never.
-      - name: hello-world # Container name (Can be set to whatever)
-        image: hello-world:latest # Docker Image hosted on Docker Hub
+        restartPolicy: OnFailure # Options are Always, OnFailure, and Never.
+        - name: hello-world # Container name (Can be set to whatever)
+          image: hello-world:latest # Docker Image hosted on Docker Hub
