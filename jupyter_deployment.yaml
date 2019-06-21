@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # Default Deployment API
+kind: Deployment # This tells kubernetes what kind of class it is working with
+metadata:
+  name: jupyter-notebook-server # Name of deployment
+  labels:
+    app: jupyter-notebook-server-deployment # Any other labels parameters that is used to describe the deployment (Customizeable)
+spec:
+  replicas: 2 # We want two instances of this image
+  selector:  # This is to specify which pod labels belongs to this deployment
+    matchLabels:
+      app: pytorch-jupyter
+  template: # Template for the pod instance
+    metadata:
+      labels: # Labels to identify the pods by
+        app: pytorch-jupyter
+    spec:
+      containers: # Container image
+      - name: pytorch-jupyter
+        image: synicix/pytorch-jupyter
