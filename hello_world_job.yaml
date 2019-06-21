@@ -1,12 +1,12 @@
-apiVersion: batch/v1 # Default K8 API
+apiVersion: batch/v1 # Jobs Default K8 API
 kind: Job # This tells kubernetes what kind of class it is working with
 metadata:
   name: hello-world # Name of the Job
 spec:
+  completions: 25
+  parallelism: 25
   template: # Pod Templete
     spec:
-      completions: 25
-      parallelism: 25
       restartPolicy: OnFailure # Options are Always, OnFailure, and Never.
       containers:
       - name: hello-world # Container name (Can be set to whatever)
