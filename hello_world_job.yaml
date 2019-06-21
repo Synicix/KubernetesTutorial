@@ -5,6 +5,8 @@ metadata:
 spec:
   template: # Pod Templete
     spec:
+      completions: 25
+      parallelism: 25
       restartPolicy: OnFailure # Options are Always, OnFailure, and Never.
       containers:
       - name: hello-world # Container name (Can be set to whatever)
