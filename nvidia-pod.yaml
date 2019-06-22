@@ -4,13 +4,8 @@ metadata:
   name: gpu-pod
 spec:
   containers:
-    - name: cuda-container
-      image: nvidia/cuda:9.0-devel
+    - name: nvidia-smi
+      image: nvidia/cuda:9.0-base nvidia-smi
       resources:
         limits:
-          nvidia.com/gpu: 2 # requesting 2 GPUs
-    - name: digits-container
-      image: nvidia/digits:6.0
-      resources:
-        limits:
-          nvidia.com/gpu: 2 # requesting 2 GPUs
+          nvidia.com/gpu: 1 # requesting 2 GPUs
