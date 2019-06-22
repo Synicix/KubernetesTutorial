@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: gpu-pod
 spec:
+  restartPolicy: OnFailure # Options are Always, OnFailure, and Never
   containers:
-    restartPolicy: OnFailure # Options are Always, OnFailure, and Never
     - name: nvidia-smi
       image: nvidia/cuda:9.0-base
       resources:
