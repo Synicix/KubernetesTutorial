@@ -1,0 +1,13 @@
+apiVersion: v1 # Default K8 API
+kind: Pod # This tells kubernetes what kind of class it is working with
+metadata:
+  name: pytorch-jupyter # Name of the Pod
+spec:
+  restartPolicy: OnFailure # Options are Always, OnFailure, and Never
+  selector:
+    app: jupyter-notebook-synicix
+  containers:
+  - name: pytorch-jupyter # Container name (Can be set to whatever)
+    image: synicix/pytorch-jupyter # Docker Image hosted on Docker Hub
+  port:
+  - containerPort: 8888
