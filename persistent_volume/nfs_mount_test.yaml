@@ -9,4 +9,4 @@ spec:
     - ReadWriteMany
   nfs:
     server: at-kubemaster2.ad.bcm.edu
-    path: /
+    path: /home/lost+found
