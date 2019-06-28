@@ -8,8 +8,9 @@ spec:
   - name: hello-world # Container name (Can be set to whatever)
     image: hello-world:latest # Docker Image hosted on Docker Hub
     resources:
-      cpu: 16
-      memory: 16Mi
-    limits:
-      cpu: 16
-      memory: 16Mi
+      request:
+        cpu: 16
+        memory: 16Mi
+      limits:
+        cpu: 16
+        memory: 16Mi
