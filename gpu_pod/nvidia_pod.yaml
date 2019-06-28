@@ -13,4 +13,4 @@ spec:
           nvidia.com/gpu: 1 # requesting 1 GPUs
   nodeSelector: # Can select node base on gpu model or memory size (These are labels the kubernetes admin assigned)
     gpu_model: 1080ti 
-    gpu_mem: 11GB
+    gpu_mem_size: 11GB
