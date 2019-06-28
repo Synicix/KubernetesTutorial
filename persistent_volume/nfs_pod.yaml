@@ -11,11 +11,11 @@ spec:
     image: synicix/pytorch-jupyter # Docker Image hosted on Docker Hub
     command: ["mkdir notebooks", "cd notebooks"]
     volumesMounts:
-      name: scratch07
-      - mountPath: "/notebook/scratch07"
+      - name: scratch07
+        mountPath: "/notebook/scratch07"
     ports:
     - containerPort: 8888
   volumes:
     - name: scratch07-claim
-    persistentVolumeClaim:
-      claimName: test-claim
+      persistentVolumeClaim:
+        claimName: test-claim
