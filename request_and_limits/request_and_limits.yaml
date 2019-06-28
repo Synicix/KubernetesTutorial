@@ -1,0 +1,15 @@
+apiVersion: v1 # Default K8 API
+kind: Pod # This tells kubernetes what kind of class it is working with
+metadata:
+  name: hello-world # Name of the Pod
+spec:
+  restartPolicy: OnFailure # Options are Always, OnFailure, and Never
+  containers:
+  - name: hello-world # Container name (Can be set to whatever)
+    image: hello-world:latest # Docker Image hosted on Docker Hub
+    resources:
+      cpu: 16
+      memory: 16Mi
+    limits:
+      cpu: 16
+      memory: 16Mi
