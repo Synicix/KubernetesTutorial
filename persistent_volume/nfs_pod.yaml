@@ -10,7 +10,7 @@ spec:
   - name: pytorch-jupyter # Container name (Can be set to whatever)
     image: synicix/pytorch-jupyter # Docker Image hosted on Docker Hub
     command: ["mkdir notebooks", "cd notebooks"]
-    volumesMounts:
+    volumeMounts:
       - name: scratch07
         mountPath: "/notebook/scratch07"
     ports:
